@@ -1,36 +1,119 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Volunteer Medical Scribe
+
+This repository contains the source code for the Volunteer Medical Scribe, a Next.js-based app for transcribing and formatting medical notes using AI.
+
+## Project Structure
+
+The repository is structured as follows:
+
+```
+├── .eslintrc.json
+├── .gitignore
+├── README.md
+├── app
+│   ├── favicon.ico
+│   ├── fonts
+│   │   ├── GeistMonoVF.woff
+│   │   └── GeistVF.woff
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+├── components
+│   └── ui
+│       ├── button.tsx
+│       ├── input.tsx
+│       └── textarea.tsx
+├── lib
+│   └── utils.ts
+├── next.config.ts
+├── package-lock.json
+├── package.json
+├── postcss.config.mjs
+├── public
+│   ├── file.svg
+│   ├── globe.svg
+│   ├── next.svg
+│   ├── vercel.svg
+│   └── window.svg
+├── tailwind.config.ts
+└── tsconfig.json
+```
 
 ## Getting Started
 
-First, run the development server:
+To get started with development:
 
+1. Clone the repository:
+```bash
+git clone https://github.com/christianchartier/volunteerscribe.git
+cd volunteerscribe
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Start the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 to view the app in the browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## App Overview
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is built using Next.js, and leverages the following tools:
 
-## Learn More
+* Tailwind CSS for styling
+* Lucide-React for icons
+* OpenAI API for AI transcription and note generation
 
-To learn more about Next.js, take a look at the following resources:
+## Folder Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+* **app/**: Contains the main pages and layout components
+* **components/ui/**: Reusable UI components like buttons, inputs, and text areas
+* **lib/**: Utility functions, such as cn for class name merging
+* **public/**: Static assets like icons and images
+* **next.config.ts**: Configuration for Next.js
+* **tailwind.config.ts**: Tailwind CSS configuration
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+* **AI Transcription**: Record audio or upload an audio file, and the app uses OpenAI's Whisper model to transcribe the conversation
+* **Medical Note Generation**: Automatically formats the transcription into a structured clinical note
+* **User-friendly UI**: Drag-and-drop file upload, visual feedback for actions like recording, and more
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Deployment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The app is designed to be deployed using Vercel, the platform that powers Next.js.
+
+To deploy:
+1. Go to Vercel and sign in
+2. Import this project from GitHub
+3. Set up environment variables like your OpenAI API key
+4. Deploy!
+
+## Environment Variables
+
+To use the OpenAI API, you will need to set up the following environment variables in a `.env` file:
+
+```
+NEXT_PUBLIC_OPENAI_API_KEY=your_openai_api_key
+```
+
+## License
+
+This project is licensed under the MIT License. See the LICENSE file for details.
+
+## Contributing
+
+Contributions are welcome! Please open an issue or submit a pull request for any improvements or fixes.
+
+---
+
+Built with ❤️ by Christian Chartier
