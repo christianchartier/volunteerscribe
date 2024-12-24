@@ -28,7 +28,7 @@ export function UploadButton({
   return (
     <div 
       className={cn(
-        "w-48 h-48 rounded-full flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out",
+        "w-40 h-40 rounded-full flex flex-col justify-center items-center cursor-pointer transition-all duration-300 ease-in-out",
         isDragging 
           ? "bg-blue-500 text-white" 
           : isProcessing || isRecording
@@ -42,9 +42,9 @@ export function UploadButton({
       onClick={() => !isProcessing && !isRecording && document.getElementById('file-input')?.click()}
     >
       {isProcessing && processingSource === 'upload' ? (
-        <Loader2 className="h-24 w-24 animate-spin" />
+        <Loader2 className="h-16 w-16 animate-spin" />
       ) : (
-        <Upload className="h-24 w-24" />
+        <Upload className="h-16 w-16" />
       )}
       <input 
         id="file-input"

@@ -31,7 +31,7 @@ export function RecordingSection({
 }: RecordingSectionProps) {
   return (
     <div className="w-2/3 flex flex-col">
-      <div className="flex-grow flex flex-col justify-center items-center p-6 space-y-8">
+      <div className="flex-grow flex flex-col justify-center items-center p-4 space-y-6">
         <div className="flex space-x-8">
           <UploadButton
             isProcessing={isProcessing}
@@ -44,7 +44,7 @@ export function RecordingSection({
             onDrop={onDrop}
             onFileSelect={onFileSelect}
           />
-          <div className="relative w-48 h-48">
+          <div className="relative w-40 h-40">
             <Button
               onClick={onRecord}
               size="lg"
@@ -59,16 +59,16 @@ export function RecordingSection({
               disabled={isProcessing && !isRecording}
             >
               {isRecording ? (
-                <Loader2 className="h-24 w-24 animate-spin" />
+                <Loader2 className="h-16 w-16 animate-spin" />
               ) : isProcessing && processingSource === 'record' ? (
-                <Loader2 className="h-24 w-24 animate-spin" />
+                <Loader2 className="h-16 w-16 animate-spin" />
               ) : (
-                <Mic className="h-24 w-24" />
+                <Mic className="h-16 w-16" />
               )}
             </Button>
           </div>
         </div>
-        <p className="text-2xl font-medium text-gray-600 text-center">
+        <p className="text-lg font-medium text-gray-600 text-center">
           {isRecording ? 'Recording...' : isProcessing ? 'Transcribing...' : 'Upload an audio file or start recording'}
         </p>
       </div>

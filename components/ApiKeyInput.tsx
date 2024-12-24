@@ -29,13 +29,13 @@ export function ApiKeyInput({
             type="password"
             value="••••••••••••••••"
             readOnly
-            className="w-48 p-2 border border-gray-300 rounded bg-gray-100"
+            className="w-40 p-1.5 border border-gray-300 rounded bg-gray-100 text-sm"
           />
           <Button
             onClick={onClearApiKey}
-            className="h-10 rounded-full bg-gray-200 hover:bg-gray-400 text-gray-800"
+            className="h-8 rounded-full bg-gray-200 hover:bg-gray-400 text-gray-800 text-sm"
           >
-            <X className="mr-2 h-4 w-4" /> Clear Key
+            <X className="mr-1.5 h-3.5 w-3.5" /> Clear Key
           </Button>
         </>
       ) : (
@@ -46,7 +46,7 @@ export function ApiKeyInput({
             value={apiKeyInput}
             onChange={(e) => onApiKeyInputChange(e.target.value)}
             className={cn(
-              "w-48 p-2 border rounded transition-all duration-300",
+              "w-40 p-1.5 border rounded transition-all duration-300 text-sm",
               isApiKeyError
                 ? "border-red-500 bg-red-50"
                 : "border-gray-300"
@@ -56,7 +56,7 @@ export function ApiKeyInput({
             onClick={onSaveApiKey}
             disabled={!apiKeyInput}
             className={cn(
-              "h-10 rounded-full transition-all duration-300 ease-in-out",
+              "h-8 rounded-full transition-all duration-300 ease-in-out text-sm",
               isApiKeyError && apiKeyInput
                 ? "bg-red-500 hover:bg-red-600 text-white"
                 : apiKeyInput
@@ -64,7 +64,7 @@ export function ApiKeyInput({
                   : "bg-gray-100 text-gray-400 cursor-not-allowed"
             )}
           >
-            <Key className="mr-2 h-4 w-4" /> Save Key
+            <Key className="mr-1.5 h-3.5 w-3.5" /> Save Key
           </Button>
         </>
       )}

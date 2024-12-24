@@ -244,10 +244,10 @@ export default function MedicalScribe() {
 
   return (
     <div className="flex flex-col h-screen bg-gray-200 text-gray-800">
-      <header className="w-full p-6 border-b border-gray-300 bg-white flex items-center justify-between">
+      <header className="w-full p-4 border-b border-gray-300 bg-white flex items-center justify-between">
         <div className="flex items-center">
-          <span className="text-4xl mr-3" role="img" aria-label="Volunteer Medical Scribe Logo">🦸🏻‍⚕️</span>
-          <h1 className="text-2xl font-semibold text-gray-900">Volunteer Medical Scribe</h1>
+          <span className="text-3xl mr-2" role="img" aria-label="Volunteer Medical Scribe Logo">🦸🏻‍⚕️</span>
+          <h1 className="text-xl font-semibold text-gray-900">Volunteer Medical Scribe</h1>
         </div>
       </header>
       <div className="flex flex-grow">
@@ -269,8 +269,8 @@ export default function MedicalScribe() {
               onFileSelect={handleFileInput}
             />
           </div>
-          <footer className="p-6 border-t border-gray-300 bg-gray-50">
-            <p className="text-sm text-gray-500 text-center">
+          <footer className="p-3 border-t border-gray-300 bg-gray-50">
+            <p className="text-xs text-gray-500 text-center">
               Record your medical notes or upload an audio file. The AI will transcribe and format them for you.
             </p>
           </footer>

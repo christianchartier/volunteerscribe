@@ -38,27 +38,27 @@ export function TranscriptionView({
 
   return (
     <div className="w-1/2 flex flex-col bg-white">
-      <div className="p-6 border-b border-gray-300">
-        <h2 className="text-xl font-semibold text-gray-900">
+      <div className="p-4 border-b border-gray-300">
+        <h2 className="text-lg font-semibold text-gray-900">
           {viewMode === 'transcription' ? 'Transcription' : 'Clinical Note'}
         </h2>
       </div>
-      <div className="flex-grow p-6 flex flex-col relative">
+      <div className="flex-grow p-4 flex flex-col relative">
         <div className="flex-grow overflow-auto mb-16">
           {errorMessage ? (
             <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded relative mb-4" role="alert">
-              <span className="block sm:inline">{errorMessage}</span>
+              <span className="block text-sm sm:inline">{errorMessage}</span>
             </div>
           ) : (
             <Textarea
               value={currentText}
               readOnly
-              className="w-full h-full resize-none bg-gray-50 border-gray-300 text-gray-800 p-4"
+              className="w-full h-full resize-none bg-gray-50 border-gray-300 text-gray-800 p-3 text-sm"
               placeholder={viewMode === 'transcription' ? "Transcription will appear here..." : "Clinical note will appear here..."}
             />
           )}
         </div>
-        <div className="absolute bottom-6 left-6 right-6 flex justify-between items-center">
+        <div className="absolute bottom-4 left-4 right-4 flex justify-between items-center">
           <ApiKeyInput
             savedApiKey={savedApiKey}
             apiKeyInput={apiKeyInput}
